@@ -1,0 +1,322 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --theme-color1: #FF4B2F;
+  --theme-color1-rgb: 255, 75, 47;
+  --theme-color2: #181818;
+  --theme-color3: #EFBB3B;
+  --theme-dark: #000002;
+  --heading-font-family: "Creato Display", sans-serif;
+  --heading-font-family2: "Clash Display", sans-serif;
+  --body-font-family: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--theme-dark);
+  color: #ffffff;
+  font-family: var(--body-font-family);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.font-clash {
+  font-family: "Clash Display", sans-serif;
+}
+
+.font-creato {
+  font-family: "Creato Display", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Animations matching Creovibe template */
+@keyframes rotateY {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animation__rotateY {
+  animation: rotateY 30s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+}
+
+.bounce-x {
+  animation: bounce-x 3.5s ease-in-out infinite;
+}
+
+/* Sign Up button animation */
+.theme-btn-one {
+  background-color: #FF4B2F;
+  color: #ffffff;
+  padding: 4px 6px 4px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-btn-one:hover {
+  background-color: #e03b20;
+}
+
+.theme-btn-one .btn-icon {
+  background-color: #ffffff;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: transform 300ms ease;
+}
+
+.theme-btn-one:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+/* theme-btn-four matching index-2.html about section */
+.theme-btn-four {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 4px 6px 4px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  transition: all 300ms ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-btn-four:hover {
+  border-color: #FF4B2F;
+  color: #ffffff;
+}
+
+.theme-btn-four .btn-icon {
+  background-color: #FF4B2F;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+}
+
+.theme-btn-four:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+/* Marquee infinite scroll keyframes */
+@keyframes marqueeScrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeScrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollLeft 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollRight 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* ==========================================================================
+   ADOBE ILLUSTRATOR PEN TOOL VECTOR MODE (HERRAMIENTA PLUMA & NODOS BEZIER)
+   Basado fielmente en image_8a4b06c6.png e image_cb193656.png
+   Se activa únicamente al pulsar el switch de vector
+   ========================================================================== */
+
+html.vector-mode {
+  --theme-color1: #0081FB;
+  --theme-color1-rgb: 0, 129, 251;
+}
+
+html.vector-mode body {
+  background-color: #08090D !important;
+  /* Cuadrícula técnica de papel milimetrado de Illustrator (como en image_8a4b06c6.png) */
+  background-image: 
+    linear-gradient(to right, rgba(0, 129, 251, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 129, 251, 0.12) 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
+  color: #F8FAFC !important;
+}
+
+/* Trazos de vector nítidos en azul de selección de pluma de Illustrator (#0081FB) */
+html.vector-mode .bg-white\/\[0\.02\],
+html.vector-mode .bg-white\/\[0\.015\],
+html.vector-mode .bg-\[\#0a0a0c\],
+html.vector-mode .bg-\[\#0d0a14\],
+html.vector-mode .bg-\[\#0e0e11\],
+html.vector-mode .bg-\[\#110E1C\],
+html.vector-mode .bg-\[\#111114\],
+html.vector-mode .bg-\[\#12101e\],
+html.vector-mode .bg-\[\#131316\],
+html.vector-mode .bg-\[\#14101e\],
+html.vector-mode [class*="rounded-2xl"],
+html.vector-mode [class*="rounded-3xl"] {
+  border: 1.5px solid #0081FB !important;
+  box-shadow: 0 0 0 1px rgba(0, 129, 251, 0.25) !important;
+  position: relative;
+}
+
+/* Nodos de ancla cuadrados de la herramienta Pluma (como los cuadrados negros/azules de image_8a4b06c6.png) */
+html.vector-mode [class*="rounded-2xl"]::before,
+html.vector-mode [class*="rounded-3xl"]::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #0081FB;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  pointer-events: none;
+}
+
+html.vector-mode [class*="rounded-2xl"]::after,
+html.vector-mode [class*="rounded-3xl"]::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #0081FB;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  pointer-events: none;
+}
+
+/* Los degradados y brillos intensos se sintetizan a líneas de contorno nítidas */
+html.vector-mode .blur-\[100px\],
+html.vector-mode .blur-\[140px\],
+html.vector-mode .blur-\[150px\],
+html.vector-mode .blur-\[160px\],
+html.vector-mode .blur-\[170px\] {
+  opacity: 0.05 !important;
+  filter: blur(50px) !important;
+}
+
+/* Títulos y textos en modo vectorial con precisión técnica */
+html.vector-mode h1,
+html.vector-mode h2,
+html.vector-mode h3 {
+  letter-spacing: -0.015em;
+  text-shadow: 0 0 1px rgba(0, 129, 251, 0.4);
+}
+
+/* Acentos de color pasan a Azul Pluma de Illustrator */
+html.vector-mode .text-\[\#FF4B2F\] {
+  color: #0081FB !important;
+  text-shadow: 0 0 10px rgba(0, 129, 251, 0.6);
+}
+
+html.vector-mode .bg-\[\#FF4B2F\],
+html.vector-mode .bg-\[\#d83824\],
+html.vector-mode .bg-\[\#d43825\] {
+  background-color: #0081FB !important;
+  color: #FFFFFF !important;
+}
+
+/* Imágenes en modo vectorial como planos de trazado limpios */
+html.vector-mode img {
+  filter: contrast(110%) brightness(95%) grayscale(70%);
+  border: 1px solid rgba(0, 129, 251, 0.5);
+}
+
+/* Botones con estilo de trazado vectorial */
+html.vector-mode .theme-btn-one {
+  background-color: #0081FB !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 15px rgba(0, 129, 251, 0.4);
+}
+
+
