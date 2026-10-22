@@ -29,7 +29,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-[#111114] border border-white/10 rounded-3xl p-8 shadow-2xl text-white">
+      <div className="relative w-full max-w-lg bg-[#1a1424] border border-[#2e233c] rounded-3xl p-8 shadow-2xl text-white">
         {/* Close Button */}
         <button
           type="button"
@@ -53,7 +53,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
             <div className="flex items-center gap-2 mb-2">
               <Sparkles 
                 className="w-5 h-5" 
-                style={{ color: isTechMode ? '#00e5ff' : '#ff3811' }} 
+                style={{ color: isTechMode ? '#00e5ff' : '#e3a5c7' }} 
               />
               <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">
                 Initiate Project Brief
@@ -75,7 +75,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
                   placeholder="e.g. Elena Rostova"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-white/40 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#e3a5c7] transition-colors"
                 />
               </div>
 
@@ -90,7 +90,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
                   placeholder="elena@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-white/40 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#e3a5c7] transition-colors"
                 />
               </div>
 
@@ -102,7 +102,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
                   id="project-type-select"
                   value={formData.projectType}
                   onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-[#19191d] border border-white/10 text-white text-sm focus:outline-none focus:border-white/40 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-[#14101a] border border-white/10 text-white text-sm focus:outline-none focus:border-[#e3a5c7] transition-colors"
                 >
                   <option value="Design & Engineering">Design &amp; Engineering</option>
                   <option value="Branding & Strategy">Branding &amp; Strategy</option>
@@ -122,14 +122,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, isT
                   placeholder="Tell us about your brand goals, scope, and timeline..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-white/40 transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#e3a5c7] transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3.5 mt-2 rounded-xl text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-                style={{ backgroundColor: isTechMode ? '#00b8d4' : '#ff3811' }}
+                className="w-full py-3.5 mt-2 rounded-xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                style={{
+                  backgroundColor: isTechMode ? '#00b8d4' : '#e3a5c7',
+                  color: isTechMode ? '#ffffff' : '#14101a',
+                }}
               >
                 <span>Send Brief</span>
                 <Send className="w-4 h-4" />

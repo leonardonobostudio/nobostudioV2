@@ -192,26 +192,26 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
   };
 
   return (
-    <section id="projects" className="relative bg-[#000002] py-24 sm:py-32 overflow-hidden border-t border-white/5">
+    <section id="projects" className="relative bg-[#14101a] py-24 sm:py-32 overflow-hidden border-t border-white/5">
       {/* Background Radial Glow Spotlight */}
       <div 
         className="absolute top-24 left-1/2 -translate-x-1/2 w-[850px] h-[850px] pointer-events-none rounded-full -z-10"
         style={{
-          background: 'radial-gradient(circle, rgba(224, 133, 182, 0.12) 0%, rgba(255, 75, 47, 0.10) 35%, rgba(18, 14, 30, 0.05) 60%, rgba(0, 0, 2, 0) 80%)',
+          background: 'radial-gradient(circle, rgba(227, 165, 199, 0.16) 0%, rgba(184, 104, 153, 0.10) 35%, rgba(20, 16, 26, 0.05) 60%, rgba(20, 16, 26, 0) 80%)',
           filter: 'blur(100px)',
         }}
       />
       
       {/* Ambient background soft aura */}
-      <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-gradient-to-br from-[#E085B6]/10 via-[#FF4B2F]/08 to-transparent blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute bottom-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#9B51E0]/10 via-[#E085B6]/06 to-transparent blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-gradient-to-br from-[#e3a5c7]/12 via-[#d48fb6]/08 to-transparent blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute bottom-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#b86899]/10 via-[#e3a5c7]/06 to-transparent blur-[160px] pointer-events-none -z-10" />
 
       <div className="max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 w-full relative z-10">
         
         {/* Top Kicker, Vector Mode Switch & Language Toggle */}
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-semibold tracking-widest uppercase text-neutral-300">
-            <Sparkles className="w-3.5 h-3.5 text-[#E085B6]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#e3a5c7]" />
             <span>PORTFOLIO & CASOS DE ÉXITO</span>
           </div>
 
@@ -240,7 +240,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
                   <span className="inline-block relative -top-1 sm:-top-3 md:-top-5 lg:-top-7 mx-1 sm:mx-2">
                     <VectorSwitch size="hero" />
                   </span>
-                  <span>YECT<span className="text-[#FF4B2F] inline-block transition-transform duration-300 hover:scale-105">O</span>S</span>
+                  <span>YECT<span className="text-[#e3a5c7] inline-block transition-transform duration-300 hover:scale-105">O</span>S</span>
                 </span>
               </>
             ) : (
@@ -299,7 +299,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
               onClick={() => setSelectedFilter(cat.id)}
               className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer ${
                 selectedFilter === cat.id
-                  ? 'bg-gradient-to-r from-[#E085B6] to-[#EC729C] text-white shadow-[0_2px_18px_rgba(224,133,182,0.4)] font-semibold scale-105'
+                  ? 'bg-[#e3a5c7] text-[#14101a] shadow-[0_2px_18px_rgba(227,165,199,0.4)] font-semibold scale-105'
                   : 'bg-white/[0.03] text-neutral-400 hover:text-white hover:bg-white/[0.08] border border-white/10'
               }`}
             >
@@ -308,24 +308,24 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
           ))}
         </div>
 
-        {/* 5. AESTHETIC DARK CARDS GRID (EXACT DESIGN MATCHING image_a504bfe2.png) */}
+        {/* 5. AESTHETIC DARK CARDS GRID */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
           {filteredProjects.map((project, idx) => (
             <VectorPenFrame key={project.id} showHandles={idx % 2 === 0} showPenIcon={idx === 0}>
               <div
                 onClick={() => setActiveProject(project)}
-                className="group relative cursor-pointer rounded-[24px] bg-[#110E1C] border border-[#262039] hover:border-[#E085B6]/60 p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(224,133,182,0.12)] overflow-hidden h-full"
+                className="group relative cursor-pointer rounded-[24px] bg-[#1c1527] border border-[#2a2039] hover:border-[#e3a5c7]/60 p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(227,165,199,0.15)] overflow-hidden h-full"
                 style={{
                   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.45)',
                 }}
               >
                 {/* Subtle card ambient radial glow on hover */}
-                <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-[#E085B6]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-[#e3a5c7]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div>
-                  {/* Top line: Category kicker (Soft Pink) + Location (Muted Grey) */}
+                  {/* Top line: Category kicker + Location */}
                   <div className="flex items-start justify-between gap-3 text-xs">
-                    <span className="font-mono uppercase tracking-wider text-[#E085B6] font-semibold text-[11px] sm:text-xs">
+                    <span className="font-mono uppercase tracking-wider text-[#e3a5c7] font-semibold text-[11px] sm:text-xs">
                       {project.categoryTag}
                     </span>
                     <span className="text-neutral-400 font-normal text-right text-[11px] sm:text-xs shrink-0">
@@ -346,13 +346,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
 
                 {/* Bottom row: Divider + Subcategory + Metric */}
                 <div>
-                  <div className="border-t border-[#262039] group-hover:border-[#382F50] transition-colors duration-300 my-5" />
+                  <div className="border-t border-[#2a2039] group-hover:border-[#382b4c] transition-colors duration-300 my-5" />
 
                   <div className="flex items-center justify-between text-xs">
                     <span className="font-medium text-white/90 text-[13px]">
                       {project.subcategory}
                     </span>
-                    <span className="font-mono font-semibold text-[#E085B6] tracking-wider text-[12px] sm:text-[13px] flex items-center gap-1">
+                    <span className="font-mono font-semibold text-[#e3a5c7] tracking-wider text-[12px] sm:text-[13px] flex items-center gap-1">
                       {project.metric}
                     </span>
                   </div>
@@ -370,7 +370,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onProjectBrief
           <button
             type="button"
             onClick={onProjectBriefClick}
-            className="theme-btn-one cursor-pointer hover:shadow-[0_4px_25px_rgba(255,75,47,0.4)] transition-all duration-300"
+            className="theme-btn-one cursor-pointer hover:shadow-[0_4px_25px_rgba(227,165,199,0.4)] transition-all duration-300"
           >
             <span className="text-sm font-semibold tracking-wide">Platícanos tu Proyecto</span>
             <span className="btn-icon">

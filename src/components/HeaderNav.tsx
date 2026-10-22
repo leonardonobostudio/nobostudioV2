@@ -28,7 +28,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onContactClick, isTechMode
           <span>NOBO</span>
           <span 
             className="w-2.5 h-2.5 rounded-sm transition-colors duration-300"
-            style={{ backgroundColor: isTechMode ? '#00e5ff' : '#ff3811' }}
+            style={{ backgroundColor: isTechMode ? '#00e5ff' : '#e3a5c7' }}
           />
         </a>
 
@@ -43,7 +43,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onContactClick, isTechMode
               <span>{link.label}</span>
               <span 
                 className="absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
-                style={{ backgroundColor: isTechMode ? '#00e5ff' : '#ff3811' }}
+                style={{ backgroundColor: isTechMode ? '#00e5ff' : '#e3a5c7' }}
               />
             </a>
           ))}
@@ -53,10 +53,10 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onContactClick, isTechMode
         <div className="flex items-center gap-4 shrink-0">
           <button
             onClick={onContactClick}
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white rounded-full transition-all duration-300 hover:shadow-lg cursor-pointer whitespace-nowrap shrink-0"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#14101a] rounded-full transition-all duration-300 hover:shadow-lg cursor-pointer whitespace-nowrap shrink-0"
             style={{ 
-              backgroundColor: isTechMode ? '#00b8d4' : '#ff3811',
-              boxShadow: isTechMode ? '0 4px 15px rgba(0,229,255,0.25)' : '0 4px 15px rgba(255,56,17,0.3)'
+              backgroundColor: isTechMode ? '#00b8d4' : '#e3a5c7',
+              boxShadow: isTechMode ? '0 4px 15px rgba(0,229,255,0.25)' : '0 4px 15px rgba(227,165,199,0.3)'
             }}
           >
             <span>Let&apos;s Talk</span>

@@ -42,10 +42,10 @@ export const ContactSection: React.FC = () => {
   return (
     <section 
       id="contact" 
-      className="relative w-full py-24 sm:py-32 bg-[#000002] border-t border-white/5 overflow-hidden text-white"
+      className="relative w-full py-24 sm:py-32 bg-[#14101a] border-t border-white/5 overflow-hidden text-white"
     >
       {/* Resplandor ambiental de fondo */}
-      <div className="absolute top-1/4 -left-48 w-[600px] h-[600px] bg-[#FF4B2F]/[0.035] blur-[170px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 -left-48 w-[600px] h-[600px] bg-[#e3a5c7]/[0.04] blur-[170px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-[#3B82F6]/[0.03] blur-[160px] rounded-full pointer-events-none -z-10" />
 
       {/* Contenedor principal alineado: max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 */}
@@ -59,7 +59,7 @@ export const ContactSection: React.FC = () => {
             <div>
               {/* Badge superior "CONTACT US" + Switch Vectorial */}
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <div className="inline-flex items-center px-4 py-1.5 rounded-md bg-[#131316] border border-white/10 text-white/80 text-xs font-semibold tracking-widest uppercase shadow-sm">
+                <div className="inline-flex items-center px-4 py-1.5 rounded-md bg-[#1c1527] border border-white/10 text-white/80 text-xs font-semibold tracking-widest uppercase shadow-sm">
                   CONTACT US
                 </div>
                 <VectorSwitch size="sm" showLabel={true} label="MODO VECTOR" />
@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
               {/* Título Principal de Impacto: "Ready to Bring Your Vision to Life?" */}
               <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.12] mb-8">
                 Ready to Bring Your<br />
-                Vision to <span className="text-[#FF4B2F]">Life?</span>
+                Vision to <span className="text-[#e3a5c7]">Life?</span>
               </h2>
 
               {/* Canales y Datos de Contacto Directos (de la Imagen 3) */}
@@ -172,7 +172,7 @@ export const ContactSection: React.FC = () => {
           {/* ========================================================= */}
           <div className="lg:col-span-7">
             <VectorPenFrame showHandles={true} showPenIcon={true}>
-              <div className="bg-[#0D0A14] border border-white/10 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden backdrop-blur-md">
+              <div className="bg-[#1c1527] border border-[#2d223c] rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden backdrop-blur-md">
               
               {submitted ? (
                 <div className="py-16 text-center flex flex-col items-center animate-in fade-in duration-300">
@@ -212,7 +212,7 @@ export const ContactSection: React.FC = () => {
                         value={formData.nombreCompleto}
                         onChange={(e) => setFormData({ ...formData, nombreCompleto: e.target.value })}
                         placeholder="Ej. Martín Soler"
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#14101E] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#FF4B2F] focus:ring-1 focus:ring-[#FF4B2F] transition-all"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#14101a] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#e3a5c7] focus:ring-1 focus:ring-[#e3a5c7] transition-all"
                       />
                     </div>
 
@@ -231,7 +231,7 @@ export const ContactSection: React.FC = () => {
                         value={formData.correoCorporativo}
                         onChange={(e) => setFormData({ ...formData, correoCorporativo: e.target.value })}
                         placeholder="martin@empresa.com"
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#14101E] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#FF4B2F] focus:ring-1 focus:ring-[#FF4B2F] transition-all"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#14101a] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#e3a5c7] focus:ring-1 focus:ring-[#e3a5c7] transition-all"
                       />
                     </div>
                   </div>
@@ -251,11 +251,11 @@ export const ContactSection: React.FC = () => {
                           id="sedePreferencia"
                           value={formData.sedePreferencia}
                           onChange={(e) => setFormData({ ...formData, sedePreferencia: e.target.value })}
-                          className="w-full appearance-none px-4 py-3.5 rounded-xl bg-[#14101E] border border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#FF4B2F] focus:ring-1 focus:ring-[#FF4B2F] transition-all cursor-pointer pr-10"
+                          className="w-full appearance-none px-4 py-3.5 rounded-xl bg-[#14101a] border border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#e3a5c7] focus:ring-1 focus:ring-[#e3a5c7] transition-all cursor-pointer pr-10"
                         >
-                          <option value="Madrid, España" className="bg-[#14101E] text-white">Madrid, España</option>
-                          <option value="Guayaquil, Ecuador" className="bg-[#14101E] text-white">Guayaquil, Ecuador</option>
-                          <option value="Remoto / Internacional" className="bg-[#14101E] text-white">Remoto / Internacional</option>
+                          <option value="Madrid, España" className="bg-[#14101a] text-white">Madrid, España</option>
+                          <option value="Guayaquil, Ecuador" className="bg-[#14101a] text-white">Guayaquil, Ecuador</option>
+                          <option value="Remoto / Internacional" className="bg-[#14101a] text-white">Remoto / Internacional</option>
                         </select>
                         <ChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
                       </div>
@@ -274,24 +274,24 @@ export const ContactSection: React.FC = () => {
                           id="servicioPrincipal"
                           value={formData.servicioPrincipal}
                           onChange={(e) => setFormData({ ...formData, servicioPrincipal: e.target.value })}
-                          className="w-full appearance-none px-4 py-3.5 rounded-xl bg-[#14101E] border border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#FF4B2F] focus:ring-1 focus:ring-[#FF4B2F] transition-all cursor-pointer pr-10"
+                          className="w-full appearance-none px-4 py-3.5 rounded-xl bg-[#14101a] border border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#e3a5c7] focus:ring-1 focus:ring-[#e3a5c7] transition-all cursor-pointer pr-10"
                         >
-                          <option value="Identidad de Marca y Editorial" className="bg-[#14101E] text-white">
+                          <option value="Identidad de Marca y Editorial" className="bg-[#14101a] text-white">
                             Identidad de Marca y Editorial
                           </option>
-                          <option value="Desarrollo Web a Medida" className="bg-[#14101E] text-white">
+                          <option value="Desarrollo Web a Medida" className="bg-[#14101a] text-white">
                             Desarrollo Web a Medida
                           </option>
-                          <option value="Relaciones Públicas y Prensa" className="bg-[#14101E] text-white">
+                          <option value="Relaciones Públicas y Prensa" className="bg-[#14101a] text-white">
                             Relaciones Públicas y Prensa
                           </option>
-                          <option value="Publicidad Digital y Rendimiento" className="bg-[#14101E] text-white">
+                          <option value="Publicidad Digital y Rendimiento" className="bg-[#14101a] text-white">
                             Publicidad Digital y Rendimiento
                           </option>
-                          <option value="Producción Audiovisual y Spots" className="bg-[#14101E] text-white">
+                          <option value="Producción Audiovisual y Spots" className="bg-[#14101a] text-white">
                             Producción Audiovisual y Spots
                           </option>
-                          <option value="Marketing Integral 360°" className="bg-[#14101E] text-white">
+                          <option value="Marketing Integral 360°" className="bg-[#14101a] text-white">
                             Marketing Integral 360°
                           </option>
                         </select>
@@ -315,7 +315,7 @@ export const ContactSection: React.FC = () => {
                       value={formData.mensaje}
                       onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                       placeholder="Describe los objetivos clave, fechas estimadas o retos de tu marca..."
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#14101E] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#FF4B2F] focus:ring-1 focus:ring-[#FF4B2F] transition-all resize-y min-h-[110px]"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#14101a] border border-white/10 text-white placeholder-zinc-500 text-sm sm:text-base focus:outline-none focus:border-[#e3a5c7] focus:ring-1 focus:ring-[#e3a5c7] transition-all resize-y min-h-[110px]"
                     />
                   </div>
 

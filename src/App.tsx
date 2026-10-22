@@ -44,14 +44,14 @@ export default function App() {
 
   return (
     <VectorModeProvider>
-      <div className="min-h-screen bg-[#000002] text-white flex flex-col font-manrope overflow-x-hidden w-full relative">
+      <div className="min-h-screen bg-[#14101a] text-white flex flex-col font-manrope overflow-x-hidden w-full relative">
         {/* 1. Creovibe Main Header */}
         <MainHeader onSignUpClick={() => setIsModalOpen(true)} />
 
         {/* Main Content Sections */}
         <main className="flex-1 w-full overflow-hidden">
           {/* 2. Banner Section Four */}
-          <BannerSectionFour onHeyCardClick={() => setIsModalOpen(true)} />
+          <BannerSectionFour />
 
           {/* 3. About Us Section Two */}
           <AboutSectionTwo onMoreAboutClick={() => setIsModalOpen(true)} />
@@ -87,7 +87,7 @@ export default function App() {
             type="button"
             onClick={scrollToTop}
             aria-label="Volver arriba"
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-[#FF4B2F] text-white flex items-center justify-center shadow-[0_4px_20px_rgba(255,75,47,0.45)] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-[#e3a5c7] text-[#14101a] flex items-center justify-center shadow-[0_4px_20px_rgba(227,165,199,0.45)] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <ChevronUp className="w-5 h-5 stroke-[2.5]" />
           </button>

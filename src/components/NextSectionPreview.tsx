@@ -46,7 +46,7 @@ export const NextSectionPreview: React.FC<NextSectionPreviewProps> = ({ isTechMo
           {/* Banner Floating Caption */}
           <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-xl">
-              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#ff7959] mb-2 block">
+              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#e3a5c7] mb-2 block">
                 Inside Nobo Agency
               </span>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white leading-tight">
@@ -75,11 +75,11 @@ export const NextSectionPreview: React.FC<NextSectionPreviewProps> = ({ isTechMo
               >
                 <div 
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 transition-colors duration-300"
-                  style={{ backgroundColor: isTechMode ? 'rgba(0, 229, 255, 0.15)' : 'rgba(255, 56, 17, 0.15)' }}
+                  style={{ backgroundColor: isTechMode ? 'rgba(0, 229, 255, 0.15)' : 'rgba(227, 165, 199, 0.15)' }}
                 >
                   <Icon 
                     className="w-6 h-6 transition-colors duration-300" 
-                    style={{ color: isTechMode ? '#00e5ff' : '#ff3811' }}
+                    style={{ color: isTechMode ? '#00e5ff' : '#e3a5c7' }}
                   />
                 </div>
                 <h4 className="text-xl font-bold font-syne text-white mb-2">{cap.title}</h4>

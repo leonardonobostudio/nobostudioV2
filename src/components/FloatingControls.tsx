@@ -45,7 +45,7 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({ isTechMode }
         >
           <ShoppingCart className="w-5 h-5 text-amber-500 fill-amber-500/20 group-hover:scale-110 transition-transform" />
           {cartItems.length > 0 && (
-            <span className="w-4 h-4 rounded-full bg-[#ff3811] text-[10px] font-bold text-white flex items-center justify-center">
+            <span className="w-4 h-4 rounded-full bg-[#e3a5c7] text-[10px] font-bold text-[#14101a] flex items-center justify-center">
               {cartItems.length}
             </span>
           )}
@@ -62,8 +62,11 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({ isTechMode }
           type="button"
           onClick={scrollToTop}
           aria-label="Scroll back to top of page"
-          className="w-12 h-12 rounded-full text-white shadow-[0_10px_25px_rgba(255,56,17,0.4)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-          style={{ backgroundColor: isTechMode ? '#00e5ff' : '#ff3811' }}
+          className="w-12 h-12 rounded-full shadow-[0_10px_25px_rgba(227,165,199,0.35)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+          style={{
+            backgroundColor: isTechMode ? '#00e5ff' : '#e3a5c7',
+            color: isTechMode ? '#ffffff' : '#14101a',
+          }}
         >
           <ChevronUp className="w-6 h-6 stroke-[3]" />
         </button>
@@ -72,11 +75,11 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({ isTechMode }
       {/* Cart Slide-out Drawer */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-xs">
-          <div className="w-full max-w-md bg-[#111114] border-l border-white/10 h-full p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
+          <div className="w-full max-w-md bg-[#1a1424] border-l border-white/10 h-full p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
-                  <ShoppingCart className="w-5 h-5 text-amber-500" />
+                  <ShoppingCart className="w-5 h-5 text-[#e3a5c7]" />
                   <h3 className="text-lg font-bold text-white font-syne">Agency Cart</h3>
                 </div>
                 <button
@@ -138,8 +141,11 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({ isTechMode }
                       setIsCartOpen(false);
                     }, 2000);
                   }}
-                  className="w-full py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white rounded-xl transition-all duration-300 cursor-pointer shadow-lg"
-                  style={{ backgroundColor: isTechMode ? '#00b8d4' : '#ff3811' }}
+                  className="w-full py-3.5 text-center text-sm font-bold uppercase tracking-wider rounded-xl transition-all duration-300 cursor-pointer shadow-lg"
+                  style={{
+                    backgroundColor: isTechMode ? '#00b8d4' : '#e3a5c7',
+                    color: isTechMode ? '#ffffff' : '#14101a',
+                  }}
                 >
                   Proceed with Consultation
                 </button>

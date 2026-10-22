@@ -24,7 +24,7 @@ export function getTechnologyModeState(isTechModeActive: boolean): {
 } {
   return {
     modeName: isTechModeActive ? 'Engineering & Code' : 'Creative & Design',
-    themeAccent: isTechModeActive ? '#00e5ff' : '#ff3811',
+    themeAccent: isTechModeActive ? '#00e5ff' : '#e3a5c7',
     showGridLines: isTechModeActive,
     tagline: isTechModeActive 
       ? 'Architecting scalable cloud systems and interactive WebGL experiences.'

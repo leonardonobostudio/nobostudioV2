@@ -11,7 +11,7 @@ interface AgencyArrowLogoProps {
  */
 export const AgencyArrowLogo: React.FC<AgencyArrowLogoProps> = ({
   className = "w-32 h-32 md:w-40 md:h-40",
-  color = "#FF3811",
+  color = "#e3a5c7",
 }) => {
   return (
     <div className={`relative shrink-0 select-none ${className}`}>
@@ -19,7 +19,7 @@ export const AgencyArrowLogo: React.FC<AgencyArrowLogoProps> = ({
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full drop-shadow-[0_10px_25px_rgba(255,56,17,0.3)] transition-transform duration-300 hover:scale-105"
+        className="w-full h-full drop-shadow-[0_10px_25px_rgba(227,165,199,0.3)] transition-transform duration-300 hover:scale-105"
       >
         {/* Top-horizontal bar & right fin arrow head */}
         <path

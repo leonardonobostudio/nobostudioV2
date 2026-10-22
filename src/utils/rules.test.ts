@@ -10,7 +10,7 @@ test('formatCustomerCount formats thousands with k+ suffix', () => {
 
 test('getTechnologyModeState returns correct theme properties', () => {
   const creative = getTechnologyModeState(false);
-  assert.equal(creative.themeAccent, '#ff3811');
+  assert.equal(creative.themeAccent, '#e3a5c7');
   assert.equal(creative.showGridLines, false);
 
   const tech = getTechnologyModeState(true);

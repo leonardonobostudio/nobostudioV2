@@ -17,11 +17,11 @@
 }
 
 :root {
-  --theme-color1: #FF4B2F;
-  --theme-color1-rgb: 255, 75, 47;
-  --theme-color2: #181818;
+  --theme-color1: #e3a5c7;
+  --theme-color1-rgb: 227, 165, 199;
+  --theme-color2: #1e1828;
   --theme-color3: #EFBB3B;
-  --theme-dark: #000002;
+  --theme-dark: #14101a;
   --heading-font-family: "Creato Display", sans-serif;
   --heading-font-family2: "Clash Display", sans-serif;
   --body-font-family: "Manrope", sans-serif;
@@ -83,10 +83,10 @@ html, body {
 
 /* Sign Up button animation */
 .theme-btn-one {
-  background-color: #FF4B2F;
-  color: #ffffff;
+  background-color: #e3a5c7;
+  color: #14101a;
   padding: 4px 6px 4px 22px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   border-radius: 9999px;
   display: inline-flex;
@@ -99,12 +99,13 @@ html, body {
 }
 
 .theme-btn-one:hover {
-  background-color: #e03b20;
+  background-color: #d48fb6;
+  box-shadow: 0 4px 20px rgba(227, 165, 199, 0.4);
 }
 
 .theme-btn-one .btn-icon {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #14101a;
+  color: #e3a5c7;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +123,7 @@ html, body {
 .theme-btn-four {
   color: #ffffff;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(227, 165, 199, 0.4);
   padding: 4px 6px 4px 22px;
   font-weight: 500;
   font-size: 16px;
@@ -139,13 +140,13 @@ html, body {
 }
 
 .theme-btn-four:hover {
-  border-color: #FF4B2F;
+  border-color: #e3a5c7;
   color: #ffffff;
 }
 
 .theme-btn-four .btn-icon {
-  background-color: #FF4B2F;
-  color: #ffffff;
+  background-color: #e3a5c7;
+  color: #14101a;
   display: inline-flex;
   align-items: center;
   justify-content: center;

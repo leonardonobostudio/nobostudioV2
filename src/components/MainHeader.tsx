@@ -19,7 +19,7 @@ export const MainHeader: React.FC<MainHeaderProps> = ({ onSignUpClick }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#000002] border-b border-[#2F2F2F]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#14101a] border-b border-[#2d2438]">
       <div className="max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 h-[88px] flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0">
@@ -36,8 +36,8 @@ export const MainHeader: React.FC<MainHeaderProps> = ({ onSignUpClick }) => {
             <a
               key={item.label}
               href={item.href}
-              className={`hover:text-[#FF4B2F] transition-colors py-1 ${
-                index === 0 ? 'text-[#FF4B2F]' : ''
+              className={`hover:text-[#e3a5c7] transition-colors py-1 ${
+                index === 0 ? 'text-[#e3a5c7]' : ''
               }`}
             >
               {item.label}
@@ -67,7 +67,7 @@ export const MainHeader: React.FC<MainHeaderProps> = ({ onSignUpClick }) => {
             type="button"
             aria-label="Toggle Navigation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-[#FF4B2F] transition-colors"
+            className="lg:hidden p-2 text-white hover:text-[#e3a5c7] transition-colors"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -76,14 +76,14 @@ export const MainHeader: React.FC<MainHeaderProps> = ({ onSignUpClick }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0a0a0c] border-b border-[#2F2F2F] px-6 py-6 space-y-4 animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden bg-[#1c1626] border-b border-[#2d2438] px-6 py-6 space-y-4 animate-in slide-in-from-top-4 duration-200">
           <nav className="flex flex-col space-y-3">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base text-white/90 hover:text-[#FF4B2F] transition-colors py-1"
+                className="text-base text-white/90 hover:text-[#e3a5c7] transition-colors py-1"
               >
                 {item.label}
               </a>

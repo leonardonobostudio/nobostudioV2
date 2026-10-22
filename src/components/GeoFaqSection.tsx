@@ -66,11 +66,11 @@ export const GeoFaqSection: React.FC = () => {
   return (
     <section 
       id="geo-faq" 
-      className="relative w-full py-24 sm:py-32 bg-[#000002] border-t border-white/5 overflow-hidden"
+      className="relative w-full py-24 sm:py-32 bg-[#14101a] border-t border-white/5 overflow-hidden"
     >
       {/* Resplandor ambiental de fondo sutil */}
       <div 
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#FF4B2F]/[0.04] blur-[150px] rounded-full pointer-events-none -z-10" 
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#e3a5c7]/[0.05] blur-[150px] rounded-full pointer-events-none -z-10" 
       />
 
       {/* Contenedor alineado a la misma cuadrícula de márgenes laterales: max-w-[1806px] */}
@@ -80,8 +80,8 @@ export const GeoFaqSection: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
             {/* Badge superior "FAQ" */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#131316] border border-white/10 text-white/70 text-xs sm:text-[13px] font-semibold tracking-widest uppercase shadow-sm">
-              <BrainCircuit className="w-3.5 h-3.5 text-[#FF4B2F]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#1c1527] border border-white/10 text-white/70 text-xs sm:text-[13px] font-semibold tracking-widest uppercase shadow-sm">
+              <BrainCircuit className="w-3.5 h-3.5 text-[#e3a5c7]" />
               <span>FAQ</span>
             </div>
 
@@ -109,8 +109,8 @@ export const GeoFaqSection: React.FC = () => {
                 <div
                   className={`relative rounded-2xl sm:rounded-[26px] transition-all duration-300 overflow-hidden ${
                     isOpen
-                      ? 'border border-[#FF4B2F]/65 bg-gradient-to-b from-[#181112] via-[#201211] to-[#301310] shadow-[0_10px_35px_rgba(255,75,47,0.14)]'
-                      : 'border border-white/5 bg-[#0e0e11] hover:bg-[#131317] hover:border-white/10'
+                      ? 'border border-[#e3a5c7]/65 bg-gradient-to-b from-[#1e1627] via-[#251b32] to-[#342044] shadow-[0_10px_35px_rgba(227,165,199,0.12)]'
+                      : 'border border-white/5 bg-[#181322] hover:bg-[#1d162a] hover:border-white/10'
                   }`}
                 >
                 {/* Botón interactivo de la cabecera del acordeón */}
@@ -124,12 +124,12 @@ export const GeoFaqSection: React.FC = () => {
                     {faq.question}
                   </span>
 
-                  {/* Icono circular a la derecha: Gris con '+' cuando está cerrado, Rojo con '-' cuando está abierto */}
+                  {/* Icono circular a la derecha: Gris con '+' cuando está cerrado, Morado con '-' cuando está abierto */}
                   <div
                     className={`shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isOpen
-                        ? 'bg-[#d83824] text-white shadow-[0_2px_12px_rgba(216,56,36,0.45)]'
-                        : 'bg-[#1b1b20] text-white/80 hover:text-white hover:bg-[#25252b]'
+                        ? 'bg-[#e3a5c7] text-[#14101a] shadow-[0_2px_12px_rgba(227,165,199,0.45)]'
+                        : 'bg-[#241c30] text-white/80 hover:text-white hover:bg-[#2d223c]'
                     }`}
                   >
                     {isOpen ? (
@@ -152,8 +152,8 @@ export const GeoFaqSection: React.FC = () => {
 
                       {faq.tag && (
                         <div className="mt-4 flex items-center gap-2">
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-[#FFA38F] border border-white/5">
-                            <Sparkles className="w-3 h-3 text-[#FF4B2F]" />
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-[#e3a5c7] border border-white/5">
+                            <Sparkles className="w-3 h-3 text-[#e3a5c7]" />
                             {faq.tag}
                           </span>
                         </div>

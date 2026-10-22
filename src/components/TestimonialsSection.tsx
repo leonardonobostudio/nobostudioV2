@@ -82,10 +82,10 @@ export const TestimonialsSection: React.FC = () => {
   const currentTestimonial = TESTIMONIALS_DATA[currentIndex];
 
   return (
-    <section id="testimonials" className="relative w-full py-20 sm:py-28 bg-[#000002] text-white overflow-hidden select-none">
+    <section id="testimonials" className="relative w-full py-20 sm:py-28 bg-[#14101a] text-white overflow-hidden select-none">
       {/* Luces de fondo ambientales */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#EFBB3B]/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-[#FF4B2F]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#e3a5c7]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-[#e3a5c7]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 w-full relative z-10">
         
@@ -94,14 +94,14 @@ export const TestimonialsSection: React.FC = () => {
           <div>
             {/* Pill Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/80 text-xs font-semibold tracking-wider uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B2F]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#e3a5c7]" />
               TESTIMONIOS DE CLIENTES
             </div>
 
             {/* Título en grande en español con acento de color */}
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-creato tracking-tight text-white leading-[1.12]">
               Descubre Por Qué Aman<br />
-              Trabaj<span className="text-[#FF4B2F]">ar Con Nosotros</span>
+              Trabaj<span className="text-[#e3a5c7]">ar Con Nosotros</span>
             </h2>
           </div>
 
@@ -110,33 +110,29 @@ export const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Layout de dos columnas: Izquierda (Certificación META & Rating) y Derecha (Testimonio Extendido sin foto) */}
+        {/* Layout de dos columnas */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           
-          {/* ========================================================= */}
-          {/* COLUMNA IZQUIERDA: Solo el Logo de Certificación META */}
-          {/* ========================================================= */}
-          <div className="lg:col-span-4 bg-[#110E1C] border border-white/10 rounded-3xl p-8 sm:p-10 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl group min-h-[340px] sm:min-h-[380px]">
+          {/* COLUMNA IZQUIERDA: Logo de Certificación META */}
+          <div className="lg:col-span-4 bg-[#1c1626] border border-white/10 rounded-3xl p-8 sm:p-10 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl group min-h-[340px] sm:min-h-[380px]">
             {/* Brillo ambiental sutil detrás del logo */}
-            <div className="absolute -top-16 -left-16 w-48 h-48 bg-[#0081FB]/15 rounded-full blur-3xl pointer-events-none group-hover:bg-[#0081FB]/25 transition-all duration-700" />
-            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#FF4B2F]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-16 -left-16 w-48 h-48 bg-[#e3a5c7]/15 rounded-full blur-3xl pointer-events-none group-hover:bg-[#e3a5c7]/25 transition-all duration-700" />
+            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#e3a5c7]/10 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Logo de Certificación META como único elemento */}
+            {/* Logo de Certificación META */}
             <div className="relative z-10 w-full flex items-center justify-center p-2 sm:p-4">
               <img
                 src="https://static.xx.fbcdn.net/mci_ab/public/cms/?ab_b=e&ab_page=CMS&ab_entry=1195761015495519&version=1792187751&transcode_extension=webp"
                 alt="Certificación META - Estrategia de marketing empresarial"
-                className="w-full max-w-[220px] sm:max-w-[260px] md:max-w-[290px] h-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_12px_28px_rgba(0,129,251,0.25)]"
+                className="w-full max-w-[220px] sm:max-w-[260px] md:max-w-[290px] h-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_12px_28px_rgba(227,165,199,0.25)]"
                 loading="lazy"
               />
             </div>
           </div>
 
-          {/* ========================================================================= */}
-          {/* COLUMNA DERECHA: Tarjeta Larga de Testimonios (Sin foto, sección extendida) */}
-          {/* ========================================================================= */}
+          {/* COLUMNA DERECHA: Tarjeta Larga de Testimonios */}
           <div 
-            className="lg:col-span-8 bg-[#110E1C] border border-white/10 rounded-3xl p-8 sm:p-12 lg:p-14 flex flex-col justify-between relative overflow-hidden shadow-2xl transition-all duration-300"
+            className="lg:col-span-8 bg-[#1c1626] border border-white/10 rounded-3xl p-8 sm:p-12 lg:p-14 flex flex-col justify-between relative overflow-hidden shadow-2xl transition-all duration-300"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -178,7 +174,7 @@ export const TestimonialsSection: React.FC = () => {
                 <img
                   src={currentTestimonial.authorAvatar}
                   alt={currentTestimonial.authorName}
-                  className="w-13 h-13 rounded-full object-cover border-2 border-[#FF4B2F]/40 shadow-md"
+                  className="w-13 h-13 rounded-full object-cover border-2 border-[#e3a5c7]/40 shadow-md"
                 />
                 <div>
                   <h3 className="text-lg font-bold text-white font-creato">
@@ -202,7 +198,7 @@ export const TestimonialsSection: React.FC = () => {
                       aria-label={`Ir al testimonio ${dotIdx + 1}`}
                       className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                         currentIndex === dotIdx
-                          ? 'w-6 bg-[#FF4B2F]'
+                          ? 'w-6 bg-[#e3a5c7]'
                           : 'w-2 bg-white/20 hover:bg-white/50'
                       }`}
                     />
@@ -213,7 +209,7 @@ export const TestimonialsSection: React.FC = () => {
                   type="button"
                   onClick={handlePrev}
                   aria-label="Testimonio anterior"
-                  className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-[#FF4B2F] hover:border-[#FF4B2F] text-white flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-md"
+                  className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-[#e3a5c7] hover:border-[#e3a5c7] text-white hover:text-[#14101a] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-md"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -221,7 +217,7 @@ export const TestimonialsSection: React.FC = () => {
                   type="button"
                   onClick={handleNext}
                   aria-label="Testimonio siguiente"
-                  className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-[#FF4B2F] hover:border-[#FF4B2F] text-white flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-md"
+                  className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-[#e3a5c7] hover:border-[#e3a5c7] text-white hover:text-[#14101a] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-md"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>

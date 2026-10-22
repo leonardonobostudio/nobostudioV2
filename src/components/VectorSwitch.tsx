@@ -182,7 +182,7 @@ export const VectorSwitch: React.FC<VectorSwitchProps> = ({
                 cx={cxOn}
                 cy={height / 2}
                 r={size === 'hero' ? '4.5' : '3'}
-                fill="#000002"
+                fill="#14101a"
                 className="transition-all duration-300"
               />
             )}

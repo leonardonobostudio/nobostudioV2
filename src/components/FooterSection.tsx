@@ -2,7 +2,7 @@ import React from 'react';
 
 export const FooterSection: React.FC = () => {
   return (
-    <footer className="w-full bg-[#000002] text-white pt-16 pb-12 relative overflow-hidden">
+    <footer className="w-full bg-[#14101a] text-white pt-16 pb-12 relative overflow-hidden">
       {/* Contenedor principal alineado: max-w-[1806px] */}
       <div className="max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 w-full">
         
@@ -65,19 +65,19 @@ export const FooterSection: React.FC = () => {
             <nav className="flex items-center gap-6 text-zinc-400 text-sm font-medium">
               <a 
                 href="#about" 
-                className="hover:text-white transition-colors"
+                className="hover:text-[#e3a5c7] transition-colors"
               >
                 Nosotros
               </a>
               <a 
                 href="#service" 
-                className="hover:text-white transition-colors"
+                className="hover:text-[#e3a5c7] transition-colors"
               >
                 Servicios
               </a>
               <a 
                 href="#projects" 
-                className="hover:text-white transition-colors"
+                className="hover:text-[#e3a5c7] transition-colors"
               >
                 Proyectos
               </a>

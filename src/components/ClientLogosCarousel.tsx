@@ -240,7 +240,7 @@ export const CLIENT_LOGOS: ClientLogoItem[] = [
     id: 7,
     name: 'Vivesmart INC',
     category: 'Escala & Marketing VSL',
-    brandColor: '#FF4B2F',
+    brandColor: '#e3a5c7',
     // 👈 [IMAGEN CLIENTE 7]: Cambia aquí la URL de tu séptimo cliente
     logoUrl: 'https://www.museodelafelicidad.com/wp-content/uploads/2025/02/cropped-Logotipp-museo-de-la-felicidad.png',
     renderSvg: (brandColor: string) => (
@@ -249,7 +249,7 @@ export const CLIENT_LOGOS: ClientLogoItem[] = [
         <g transform="translate(10, 8)">
           <rect x="2" y="2" width="48" height="48" rx="12" fill={`${brandColor}15`} stroke={brandColor} strokeWidth="1.8" />
           <path d="M16 38L26 14L36 38L26 31L16 38Z" fill={brandColor} />
-          <path d="M26 14V31" stroke="#FFA38F" strokeWidth="2" strokeLinecap="round" />
+          <path d="M26 14V31" stroke="#f2c7dd" strokeWidth="2" strokeLinecap="round" />
           <circle cx="26" cy="24" r="2.5" fill="#FFFFFF" />
         </g>
         {/* Wordmark Tech & Growth Marketing */}
@@ -258,9 +258,9 @@ export const CLIENT_LOGOS: ClientLogoItem[] = [
             VIVESMART
           </text>
           <text x="0" y="39" fill={brandColor} fontFamily="sans-serif" fontSize="11" fontWeight="800" letterSpacing="0.32em">
-            INC <tspan fill="#FFA38F" fontSize="9" fontWeight="600">• VSL 30K BUDGET</tspan>
+            INC <tspan fill="#f2c7dd" fontSize="9" fontWeight="600">• VSL 30K BUDGET</tspan>
           </text>
-          <text x="1" y="50" fill="#FFA38F" fontFamily="sans-serif" fontSize="7.5" fontWeight="500" letterSpacing="0.35em">
+          <text x="1" y="50" fill="#f2c7dd" fontFamily="sans-serif" fontSize="7.5" fontWeight="500" letterSpacing="0.35em">
             GROWTH & STRATEGY
           </text>
         </g>
@@ -310,28 +310,21 @@ export const ClientLogosCarousel: React.FC = () => {
   return (
     <section 
       id="clients" 
-      className="relative w-full py-16 sm:py-24 bg-[#000002] border-t border-b border-white/5 select-none overflow-hidden"
+      className="relative w-full py-16 sm:py-24 bg-[#14101a] border-t border-b border-white/5 select-none overflow-hidden"
     >
-      {/* 
-        ========================================================================
-        ALINEACIÓN Y MÁRGENES UNIFORMES
-        Usamos max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 w-full
-        idéntico al inicio, proyectos y testimonios para coherencia geométrica.
-        ========================================================================
-      */}
       <div className="max-w-[1806px] mx-auto px-4 sm:px-8 lg:px-12 w-full relative z-10">
         
         {/* Cabecera de la Sección de Clientes con Controles Interactivos */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 sm:mb-12">
           <div>
             <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#FF4B2F] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#e3a5c7] animate-pulse" />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-white/70 font-semibold">
                 CLIENTES & MARCAS ALIADAS
               </span>
             </div>
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-creato text-white tracking-tight">
-              Marcas que Confían en el Ecosistema <span className="text-[#FF4B2F]">Creovibe</span>
+              Marcas que Confían en el Ecosistema <span className="text-[#e3a5c7]">Nobo Studio</span>
             </h3>
           </div>
 
@@ -375,14 +368,7 @@ export const ClientLogosCarousel: React.FC = () => {
         </div>
 
         {/* 
-          ========================================================================
           CARRUSEL AUTOMÁTICO CON EXACTAMENTE 5 LOGOS EN PANTALLA EN DESKTOP
-          - Desktop (lg:): exactamente 5 visibles (w-1/5 = 20% del ancho cada uno).
-          - Tablet (sm/md:): 3 visible (w-1/3 = 33.33%).
-          - Móvil: 2 visibles (w-1/2 = 50%).
-          - Blanco y Negro por defecto -> Color completo e iluminación en hover.
-          - Son exclusivamente imágenes y logotipos vectoriales gráficos (NO texto plano).
-          ========================================================================
         */}
         <div 
           className="relative w-full overflow-hidden rounded-2xl bg-white/[0.015] border border-white/10 p-3 sm:p-5"
@@ -390,15 +376,13 @@ export const ClientLogosCarousel: React.FC = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Sombras difuminadas en los extremos para un fade elegante */}
-          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#000002] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#000002] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#14101a] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#14101a] to-transparent z-10 pointer-events-none" />
 
           {/* Track del carrusel con animación suave por desplazamiento */}
           <div 
             className="flex transition-transform duration-700 ease-in-out"
             style={{
-              // Desplaza suavemente 1 elemento hacia la izquierda
-              // En desktop: 1 elemento = 20% (para mantener exactamente 5 visibles)
               transform: `translateX(-${(currentIndex * 100) / 5}%)`,
             }}
           >
@@ -407,33 +391,20 @@ export const ClientLogosCarousel: React.FC = () => {
                 key={`${client.id}-${index}`}
                 className="w-1/2 sm:w-1/3 md:w-1/3 lg:w-1/5 flex-shrink-0 px-2 sm:px-3"
               >
-                {/* 
-                  Tarjeta de Logotipo:
-                  - En estado normal: Grayscale 100% (Blanco y Negro puro), opacidad reducida.
-                  - En estado hover: Grayscale 0% (Color Original Vibrante), escala 105% y brillo de marca.
-                */}
                 <div 
                   className="group relative h-28 sm:h-32 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/20 hover:bg-white/[0.06] transition-all duration-300 flex items-center justify-center p-3 sm:p-4 cursor-pointer overflow-hidden shadow-sm"
                   style={{
-                    // En hover aplicamos borde sutil con el color de marca
                     borderColor: 'rgba(255,255,255,0.08)',
                   }}
                   title={`${client.name} — ${client.category}`}
                 >
-                  {/* Resplandor suave en hover con el color de la marca */}
                   <div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none blur-xl -z-10"
                     style={{ backgroundColor: `${client.brandColor}18` }}
                   />
 
-                  {/* 
-                    LOGOTIPO GRÁFICO (IMAGEN REAL O SVG VECTORIAL)
-                    REGLA: En blanco y negro por defecto, a color en hover.
-                    'grayscale contrast-75 brightness-90 opacity-60 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 group-hover:opacity-100'
-                  */}
                   <div className="w-full h-full flex items-center justify-center grayscale contrast-75 brightness-90 opacity-60 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-105">
                     {client.logoUrl ? (
-                      /* Si el usuario suministró la URL de una imagen PNG/JPG/SVG/WEBP */
                       <img 
                         src={client.logoUrl} 
                         alt={client.name}
@@ -441,14 +412,12 @@ export const ClientLogosCarousel: React.FC = () => {
                         loading="lazy"
                       />
                     ) : (
-                      /* Logotipo gráfico vectorial oficial como imagen gráfica completa */
                       <div className="w-full h-full flex items-center justify-center max-w-[210px]">
                         {client.renderSvg(client.brandColor)}
                       </div>
                     )}
                   </div>
 
-                  {/* Línea de acento inferior en hover */}
                   <div 
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-[2px] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
                     style={{ backgroundColor: client.brandColor }}
@@ -471,7 +440,7 @@ export const ClientLogosCarousel: React.FC = () => {
                 aria-label={`Ir al logo de ${client.name}`}
                 className={`transition-all duration-300 rounded-full cursor-pointer ${
                   isActive 
-                    ? 'w-7 h-2 bg-[#FF4B2F]' 
+                    ? 'w-7 h-2 bg-[#e3a5c7]' 
                     : 'w-2 h-2 bg-white/20 hover:bg-white/40'
                 }`}
                 title={client.name}
